@@ -174,7 +174,7 @@ Good luck, and Happy Coding.
 
 # Array.Filter
 ---
-In its simplest form, Array.filter is a way to filter a large array intto a smaller array. 
+In its simplest form, Array.filter is a way to filter a large array into a smaller array. 
 
 Let's look at the following example of filtering an array using Array.forEach();
 In the examples below, our goal is to filter a list of players, retaining only the players on the team "SF".
