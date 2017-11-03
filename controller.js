@@ -1,7 +1,6 @@
 function Controller(){
     var loading = true; //Start the spinner
     var playerService = new PlayerService(ready);
-    
     function ready(){
         loading = false; //stop the spinner
     
