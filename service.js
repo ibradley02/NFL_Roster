@@ -3,17 +3,19 @@ var PlayerService = function PlayerService(callback) {
   var playersData = [];
 
   this.getPlayersByTeam = function (teamName) {
+    return playersData.filter(function (player) {
+      if (player.team == teamName) {
+        return true;
+      }
+    })
+  }
+
+  this.getPlayersByPosition = function (position) {
     var filteredPlayers = playersData.filter(function (player) {
       if (player.team === "SF") {
         return true;
       }
     });
-
-    console.log(filteredPlayers);
-  }
-
-  this.getPlayersByPosition = function (position) {
-    // ...
   }
 
   function loadPlayersData() {
@@ -26,7 +28,7 @@ var PlayerService = function PlayerService(callback) {
 
 
     var url = "https://bcw-getter.herokuapp.com/?url=";
-    var endpointUri = "http://api.cbssports.com/fantasy/players/list?version=3.0&SPORT=football&response_format=json";
+    var endpointUri = "https://api.cbssports.com/fantasy/players/list?version=3.0&SPORT=football&response_format=json";
     var apiUrl = url + encodeURIComponent(endpointUri);
 
     $.getJSON(apiUrl, function (data) {
@@ -38,5 +40,5 @@ var PlayerService = function PlayerService(callback) {
       callback()
     });
   }
-loadPlayersData();
+  loadPlayersData();
 }
