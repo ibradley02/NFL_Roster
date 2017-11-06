@@ -1,4 +1,4 @@
-function Controller(){
+function PlayersController(){
     var loading = true; //Start the spinner
     var playerService = new PlayerService(ready);
     function ready(){
@@ -11,32 +11,26 @@ function Controller(){
           var teamSF = playerService.getPlayersByTeam("SF");
         })
     }
-    function draw(playerList){
+    var playersElem = document.getElementById('player')
+    function draw(){
+        var players = playerService.getPlayers()
         template=''
-        for (var i; i<playerList.length; i++){
-            var player = playerList[i];
+        for (var i=0; i<players.length; i++){
+            var player = players[i];
 
             template += `
-            <div class="panel">
-            <div class="panel-heading">
-                <div class="panel-title text-center">
-                    <h1>My NFL Roster</h1>
-                </div>
-            </div>
-            <div class="panel-body">
                 <div class="player-roster">
                     <div class="player-card">
                         <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/"></img>
-                        <h3>Name:</h3>
-                        <h5>Team: ${playersData.team}</h5>
-                        <h5>Position:</h5>
+                        <h3>Name: ${players.fullname}</h3>
+                        <h5>Team: ${playerService.playersData.pro_team}</h5>
+                        <h5>Position: ${players.position}</h5>
                     </div>
                 </div>
                 <div class="my-team"></div>
-            </div>
-        </div> 
             `
         }
-        document.getElementById('player')
+        playersElem.innerHTML = template
     }
+    draw()
 }

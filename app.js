@@ -1,1 +1,5 @@
-var ctrl = new Controller()
+var app = {
+    controllers: {
+        playerCtrl: new PlayersController()
+    }
+}
