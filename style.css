@@ -1,6 +1,8 @@
 .player-card{
     display: inline-block !important;
     outline: 1px solid black;
+    float: none;
+    margin: 0 auto;
 }
 .sizing{
     max-width: 200px;

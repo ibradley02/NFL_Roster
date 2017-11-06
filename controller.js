@@ -21,7 +21,7 @@ function PlayersController(){
             template += `
             <div class="col-xs-4 sizing">
                 <div class="player-roster">
-                    <div class="player-card">
+                    <div class="player-card text-center">
                         <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/"></img>
                         <h3>Name: ${player.fullname}</h3>
                         <h5>Team: ${player.pro_team}</h5>
