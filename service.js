@@ -22,6 +22,10 @@ var PlayerService = function PlayerService(callback) {
     });
   }
 
+  this.addPlayer = function (player){
+    
+  }
+
   function loadPlayersData() {
 
     var localData = localStorage.getItem('playersData');

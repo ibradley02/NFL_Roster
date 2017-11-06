@@ -2,3 +2,8 @@
     display: inline-block !important;
     outline: 1px solid black;
 }
+.sizing{
+    max-width: 200px;
+    height: 60vh;
+    margin-bottom: 5px;
+}
