@@ -22,9 +22,10 @@ function PlayersController(){
                 <div class="player-roster">
                     <div class="player-card">
                         <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/"></img>
-                        <h3>Name: ${players.fullname}</h3>
-                        <h5>Team: ${playerService.playersData.pro_team}</h5>
-                        <h5>Position: ${players.position}</h5>
+                        <h3>Name: ${player.fullname}</h3>
+                        <h5>Team: ${player.pro_team}</h5>
+                        <h5>Position: ${player.position}</h5>
+                        <button class="btn btn-success">Add</button>
                     </div>
                 </div>
                 <div class="my-team"></div>

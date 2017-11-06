@@ -1,5 +1,4 @@
 .player-card{
-    display: inline-block;
+    display: inline-block !important;
     outline: 1px solid black;
-    
 }
