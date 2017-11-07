@@ -26,17 +26,16 @@ function PlayersController(){
                         <h3>Name: ${player.fullname}</h3>
                         <h5>Team: ${player.pro_team}</h5>
                         <h5>Position: ${player.position}</h5>
-                        <button class="btn btn-success" onclick="app.controllers.playerCtrl.addPlayer()">Add</button>
+                        <button class="btn btn-success" onclick="app.controllers.playerCtrl.addPlayer(${player.id})">Add</button>
                     </div>
                 </div>
-                <div id="my-team"></div>
             </div>
             `
         }
         playersElem.innerHTML = template
     }
     draw()
-    this.addPlayer = function addPlayer(player){
-        playerService.addPlayer(player)
+    this.addPlayer = function addPlayer(id){
+        playerService.addPlayer(id)
     }
 }
