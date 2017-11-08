@@ -2,8 +2,13 @@ var PlayerService = function PlayerService(callback) {
   var endpointUri = "http://api.cbssports.com/fantasy/players/list?version=3.0&SPORT=football&response_format=json";
   var playersData = [];
   var myPlayers = [];
+
   this.getPlayers = function(){
     return playersData;
+  }
+
+  this.getMyPlayers = function(){
+    return myPlayers;
   }
 
   this.getPlayersByTeam = function (teamName) {
@@ -28,6 +33,15 @@ var PlayerService = function PlayerService(callback) {
       if (player.id == id){
         myPlayers.push(player)
         console.log(myPlayers)
+      }
+    }
+  }
+
+  this.removePlayer = function removePlayer(id){
+    for (var j = 0; j < myPlayers.length; j++) {
+      var player = myPlayers[j];
+      if (player.id == id){
+        myPlayers.splice(j, 1)
       }
     }
   }
