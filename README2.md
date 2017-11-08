@@ -203,7 +203,7 @@ var filteredPlayers = playersData.filter(function(player){ //replace forEach wit
 });
 
 console.log(filteredPlayers); //this should be all players that are on SF.
-```
+<!-- ``` -->
 
 The code is very similar, but we do not need to push any objects to a temporary array.
 Array.filter() works by looking at the response from the callback. If we return TRUE inside 

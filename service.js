@@ -12,7 +12,7 @@ var PlayerService = function PlayerService(callback) {
   }
 
   this.getPlayersByTeam = function (teamName) {
-    return playersData.filter(function (player) {
+    var playersByTeam = playersData.filter(function (player) {
       if (player.team == teamName) {
         return true;
       }
@@ -20,7 +20,7 @@ var PlayerService = function PlayerService(callback) {
   }
 
   this.getPlayersByPosition = function (position) {
-    var filteredPlayers = playersData.filter(function (player) {
+    var playersByPosition = playersData.filter(function (player) {
       if (player.team === "SF") {
         return true;
       }
