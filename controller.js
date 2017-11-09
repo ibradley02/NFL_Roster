@@ -48,7 +48,7 @@ function PlayersController(){
                         <h3>Name: ${player.fullname}</h3>
                         <h5>Team: ${player.pro_team}</h5>
                         <h5>Position: ${player.position}</h5>
-                        <button class="btn btn-success" onclick="app.controllers.playerCtrl.addPlayer(${player.id})">Add</button>
+                        <button class="btn btn-success" onclick="app.controllers.playersCtrl.addPlayer(${player.id})">Add</button>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@ function PlayersController(){
             <h3>Name: ${player.fullname}</h3>
             <h5>Team: ${player.pro_team}</h5>
             <h5>Position: ${player.position}</h5>
-            <button class="btn btn-success" onclick="app.controllers.playerCtrl.removePlayer(${player.id})">Remove</button>
+            <button class="btn btn-success" onclick="app.controllers.playersCtrl.removePlayer(${player.id})">Remove</button>
             </div>
             </div>
             </div>
@@ -92,8 +92,8 @@ function PlayersController(){
                         <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/"></img>
                         <h3>Name: ${player.fullname}</h3>
                         <h5>Team: ${player.pro_team}</h5>
-                        <h5>Position: ${player.position}</h5>
-                        <button class="btn btn-success" onclick="app.controllers.playerCtrl.addPlayer(${player.id})">Add</button>
+                        <h5>Position: ${player.position}</h5>s
+                        <button class="btn btn-success" onclick="app.controllers.playersCtrl.addPlayer(${player.id})">Add</button>
                     </div>
                 </div>
             </div>
