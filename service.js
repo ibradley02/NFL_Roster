@@ -28,7 +28,7 @@ var PlayerService = function PlayerService(callback) {
   }
   this.getPlayersByName = function (name) {
     return(playersData.filter(function (player) {
-      if (player.fullname.includes(name)){
+      if (player.fullname.toLowerCase().includes(name.toLowerCase())){
         return true
       }
     }))
