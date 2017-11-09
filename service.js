@@ -5,6 +5,7 @@ var PlayerService = function PlayerService(callback) {
 
   this.getPlayers = function(){
     return playersData;
+    console.log(playersData.pro_team)
   }
 
   this.getMyPlayers = function(){
@@ -12,16 +13,16 @@ var PlayerService = function PlayerService(callback) {
   }
 
   this.getPlayersByTeam = function (teamName) {
-    var playersByTeam = playersData.filter(function (player) {
-      if (player.team == teamName) {
+    return(playersData.filter(function (player) {
+      if (player.pro_team == teamName) {
         return true;
       }
-    })
+    }))
   }
 
   this.getPlayersByPosition = function (position) {
     var playersByPosition = playersData.filter(function (player) {
-      if (player.team === "SF") {
+      if (player.position === position) {
         return true;
       }
     });
@@ -32,7 +33,6 @@ var PlayerService = function PlayerService(callback) {
       var player = playersData[i];
       if (player.id == id){
         myPlayers.push(player)
-        console.log(myPlayers)
       }
     }
   }

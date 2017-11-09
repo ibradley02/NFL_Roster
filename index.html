@@ -14,6 +14,15 @@
 <body>
     <div class="container">
         <div class="row">
+                <form onsubmit="app.controllers.playersCtrl.getPlayersByTeam(event)">
+                        <div class="form-group col-sm-4">
+                            <label for="teams">Teams</label>
+                            <input placeholder="Search Teams ex. ATL, SF..." type="string" name="team" class="form-control" >
+                            <button type="submit">Search</button>
+                        </div>
+                    </form>
+        </div>
+        <div class="row">
             <div class="panel">
                 <div class="panel-title text-center">
                     <h1>MY ROSTER</h1>
