@@ -14,13 +14,27 @@
 <body>
     <div class="container">
         <div class="row">
-                <form onsubmit="app.controllers.playersCtrl.getPlayersByTeam(event)">
-                        <div class="form-group col-sm-4">
-                            <label for="teams">Teams</label>
-                            <input placeholder="Search Teams ex. ATL, SF..." type="string" name="team" class="form-control" >
-                            <button type="submit">Search</button>
-                        </div>
-                    </form>
+            <form onsubmit="app.controllers.playersCtrl.getPlayersByTeam(event)">
+                <div class="form-group col-sm-4">
+                    <label for="teams">Teams</label>
+                    <input placeholder="Search Teams ex. ATL, SF..." type="string" name="team" class="form-control">
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+            <form onsubmit="app.controllers.playersCtrl.getPlayersByPosition(event)">
+                <div class="form-group col-sm-4">
+                    <label for="position">Position</label>
+                    <input placeholder="Search Positions ex. QB, WR..." type="string" name="position" class="form-control">
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+            <form onsubmit="app.controllers.playersCtrl.getPlayersByName(event)">
+                <div class="form-group col-sm-4">
+                    <label for="players">Players</label>
+                    <input placeholder="Search Players" type="string" name="name" class="form-control">
+                    <button type="submit">Search</button>
+                </div>
+            </form>
         </div>
         <div class="row">
             <div class="panel">

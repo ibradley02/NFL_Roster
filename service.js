@@ -19,13 +19,19 @@ var PlayerService = function PlayerService(callback) {
       }
     }))
   }
-
   this.getPlayersByPosition = function (position) {
-    var playersByPosition = playersData.filter(function (player) {
-      if (player.position === position) {
+    return(playersData.filter(function (player) {
+      if (player.position == position) {
         return true;
       }
-    });
+    }))
+  }
+  this.getPlayersByName = function (name) {
+    return(playersData.filter(function (player) {
+      if (player.fullname.includes(name)){
+        return true
+      }
+    }))
   }
 
   this.addPlayer = function addPlayer(id){

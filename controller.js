@@ -20,6 +20,18 @@ function PlayersController(){
         var filtered = playerService.getPlayersByTeam(teamName)
         updatePlayers(filtered)
     }
+    this.getPlayersByPosition = function getPlayersByPosition(event){
+        event.preventDefault()
+        var position = event.target.position.value
+        var filtered = playerService.getPlayersByPosition(position)
+        updatePlayers(filtered)
+    }
+    this.getPlayersByName = function getPlayersByName(event){
+        event.preventDefault()
+        var name = event.target.name.value
+        var filtered = playerService.getPlayersByName(name)
+        updatePlayers(filtered)
+    }
     //PRIVATE
     function drawRoster(players){
         var playersElem = document.getElementById('player')
